@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="primary" >
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Project Sirinat</ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content>
+    <ion-item>
+      <ion-label>Start Date</ion-label>
+      <ion-datetime displayFormat="DD-MM-YYYY" [(ngModel)]="event.month" (ionChange)="changeStartDate()"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>End Date</ion-label>
+      <ion-datetime displayFormat="DD-MM-YYYY" [(ngModel)]="event.timeEnds" (ionChange)="changeEndDate()"></ion-datetime>
+    </ion-item>
+
+
+    <ion-card>
+      <ion-card-header>
+        Line Chart
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #lineCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+ 
+</ion-content>
